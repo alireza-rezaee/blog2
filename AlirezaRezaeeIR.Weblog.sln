@@ -7,12 +7,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlirezaRezaeeIR.Weblog", "s
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{31222545-E58D-4FF2-B724-F9EB1FD6C212}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "~", "~", "{FBBE39D7-3F65-47C6-8157-0FCEFBC68F68}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".~", ".~", "{FBBE39D7-3F65-47C6-8157-0FCEFBC68F68}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		LICENSE = LICENSE
 		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{B31BD6D9-2960-4492-8830-52476604C568}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{13A4EBBE-7D6A-4EC0-88DF-EDD2412E9655}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
 	EndProjectSection
 EndProject
 Global
@@ -31,6 +38,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{073C8670-833E-4FC6-98F2-7DC7BCCC708E} = {31222545-E58D-4FF2-B724-F9EB1FD6C212}
+		{13A4EBBE-7D6A-4EC0-88DF-EDD2412E9655} = {B31BD6D9-2960-4492-8830-52476604C568}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BF08396-C791-4A59-99C4-82D21CE56A7C}
