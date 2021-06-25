@@ -34,12 +34,12 @@ jobs:
     - name: Add .nojekyll file
       run: touch bin/Release/wwwroot/.nojekyll
 
-    - name: Commit wwwroot to GitHub Pages
+    - name: Commit Release to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
         GITHUB_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: bin/Release/wwwroot
+        FOLDER: bin/Release
 
     #- name: Tests
     #  run: dotnet test Blogifier/tests/Blogifier.Tests
