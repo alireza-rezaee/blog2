@@ -18,15 +18,15 @@ jobs:
       with:
         dotnet-version: 5.0.101
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore Blogifier/src/Blogifier/Blogifier.csproj
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build Blogifier/src/Blogifier/Blogifier.csproj --no-restore
 
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
-      run: dotnet publish src/AlirezaRezaeeIR.Weblog/AlirezaRezaeeIR.Weblog.csproj -c Release -o bin/Release --nologo
+      run: dotnet publish Blogifier/src/Blogifier/Blogifier.csproj -c Release -o bin/Release --nologo
 
-    # changes the base-tag in index.html from '/' to 'AlirezaRezaeeIR.Weblog' to match GitHub Pages repository subdirectory
+    # changes the base-tag in index.html from '/' to 'Blogifier' to match GitHub Pages repository subdirectory
     #- name: Change base-tag in index.html from / to blog
     #  run: sed -i 's/<base href="\/" \/>/<base href="\/blog\/" \/>/g' bin/Release/wwwroot/index.html
 
@@ -41,7 +41,5 @@ jobs:
         BRANCH: gh-pages
         FOLDER: bin/Release/wwwroot
 
-    #- name: Unit Tests
-    #  run: dotnet test tests/AlirezaRezaeeIR.UnitTests --no-build --verbosity normal
-    #- name: Integration Tests
-    #  run: dotnet test tests/AlirezaRezaeeIR.IntegrationTests --no-build --verbosity normal
+    #- name: Tests
+    #  run: dotnet test Blogifier/tests/Blogifier.Tests
